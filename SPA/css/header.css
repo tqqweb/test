@@ -1,0 +1,429 @@
+.header_wrap {
+	/*插入背景图片*/
+    background: url(../images/banner.jpg) no-repeat 0 0;
+    /*将背景图片缩放到整好完全覆盖定义背景的区域*/
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 800px;
+}
+
+.header_wrap .header {
+    position: relative;
+}
+/*左右两片浮动开，各自设置自己独有的样式*/
+.header_left {
+    float: left;
+}
+
+.header_right {
+    float: right;
+}
+
+.header_left a {
+    padding: 2em 1em 1em;
+    background: #c6c5c0;
+    color: #fff;
+    font-size: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.header_left a span {
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.header_left a i {
+    font-size: 1em;
+    color: #fff;
+    left: -10px;
+    top: 5px;
+}
+
+/*设置头部中间的导航样式*/
+.header_middle {
+    width: 600px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*border: 1px solid red;*/
+}
+
+.header_middle .menu {
+    display: none;
+}
+
+.header_middle ul li {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    float: left;
+}
+
+.header_middle ul li a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 45px 30px;
+    display: block;
+}
+
+.header_middle ul li.active a {
+    background: #6ea145;
+    color: #fff;
+}
+
+.nav_item {
+    display: inline-block;
+    vertical-align: middle;
+    /*transform 属性向元素应用 2D 或 3D 转换,该属性允许我们对元素进行旋转、缩放、移动或倾斜。*/
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /*盒子阴影,没有就不用设置*/
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+   /*backface-visibility隐藏被旋转的 div 元素的背面*/
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /*font-smoothing 是用于兼容火狐浏览器中设置字体的抗锯齿或者说光滑度的属性，看起来会更清晰舒服*/
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    /*transition-property属性规定应用过渡效果的 CSS 属性的名称*/
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    /*border: 1px solid;*/
+}
+/*在.nav_item上设置伪类before并设置它的定位方式为相对定位，*/
+/*:before 选择器在被选元素的内容前面插入内容。使用 content 属性来指定要插入的内容。*/
+.nav_item:before {
+    content: "";
+    position: absolute; /*定义伪类100%撑开 父级元素*/
+    /*然后设置top:0;bottom:0;left:0;right;0; 让它完全撑开*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #6ea145;
+    /*改变它的旋转基点和让它在Y轴进行缩放。*/
+    -webkit-transform: scaleY(0); /*通过设置 Y 轴的值来定义缩放转换*/
+    transform: scaleY(0); /*通过设置 Y 轴的值来定义缩放转换*/
+    -webkit-transform-origin: 50% 0; /*设置旋转元素的基点位置*/
+    transform-origin: 50% 0; /*设置旋转元素的基点位置*/
+    -webkit-transition-property: transform; /*设置过度的属性*/
+   /*再上面设置一些transition属性来控制它的过度，*/
+    transition-property: transform; /*设置过度的属性*/
+    -webkit-transition-duration: 0.3s; /*设置过度时间*/
+    transition-duration: 0.3s; /*设置过度时间*/
+    -webkit-transition-timing-function: ease-out; /*设置过度的效果*/
+    transition-timing-function: ease-out; /*设置过度的效果*/
+	z-index: -1;
+}
+/*在.nav_item:hover上定义它鼠标移后的改变的属性。
+ * （为了防止出现兼容性问题，所有把所有a标签的状态都写了出来）*/
+.nav_item:hover, .nav_item:focus, .nav_item:active {
+    color: white;
+}
+
+.nav_item:hover:before, .nav_item:focus:before, .nav_item:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.header_middle ul li a i {
+    font-size: 1em;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin: 0.5em 0 0;
+}
+
+.header_right ul {
+    padding: 4em 0 0;
+}
+
+.header_right ul li {
+    display: inline-block;
+}
+
+.header_right ul li a {
+    background: url(../images/icon-tb.png) no-repeat;
+    display: block;
+    height: 32px;
+    width: 32px;
+}
+
+.header_right ul li a.facebook {
+    background-position: -5px -13px;
+}
+
+.header_right ul li a.facebook:hover {
+    background-position: -5px -59px;
+}
+
+.header_right ul li a.g {
+    background-position: -48px -13px;
+}
+
+.header_right ul li a.g:hover {
+    background-position: -48px -58px;
+}
+
+.header_right ul li a.twitter {
+    background-position: -86px -13px;
+}
+
+.header_right ul li a.twitter:hover {
+    background-position: -86px -58px;
+}
+
+/*设置头部下方的详情信息的样式*/
+/*设置它外面的.header_info的整体宽度为65%，通过margin值来调整它在头部的位置关系*/
+.header_info {
+    width: 65%;
+    margin: 18em auto 0 22em;
+}
+/*设置h1和p标签里面文字的样式*/
+.header_info h1 {
+	/*text-transform 属性控制文本的大小写,capitalize文本中的每个单词以大写字母开头*/
+    text-transform: capitalize;
+    font-size: 2.8em;
+    color: #FFFFFF;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+}
+
+.header_info p {
+    font-size: 14px;
+    color: #DFDFDF;
+    margin: 1em 0 2em;
+    line-height: 1.8em;
+    width: 80%;
+}
+
+.more a {
+    font-size: 16px;
+    color: #FFF;
+    padding: 10px 30px;
+    text-decoration: none;
+    background-color: #6ea145;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+}
+
+.more a:hover {
+    color: #6ea145;
+    background: #fff;
+    text-decoration: none;
+}
+
+
+/*按屏幕的梯度从大到小进行屏幕的适配*/
+
+/*-----start-responsive-design------*/
+/*在小于等于1280px的屏上设置*/
+/*最大宽度max-width(最常用的一个特性)*/
+@media (max-width: 1280px) {
+
+    .header_info {
+        margin: 10em auto 0 22em;
+    }
+
+    .header_wrap {
+        min-height: 660px;
+    }
+}
+/*在小于等于1024px的屏上设置*/
+@media (max-width: 1024px) {
+
+    .header_info {
+        margin: 10em auto 0 14em;
+        width: 71%;
+    }
+
+    .header_wrap {
+        min-height: 585px;
+    }
+
+    .header_right ul {
+        padding: 3.5em 0 0;
+    }
+}
+/*最小宽度min-width*/
+@media (min-width: 993px) {
+    /* 解决 屏幕由小到大时无法 显示 导航的问题*/
+    ul.nav_list {
+        display: block !important;
+    }
+}
+/*在小于等于922px的屏上设置  ul影藏   .menu显示*/
+@media (max-width: 992px) {
+    .header_middle { /* 重新设置 头部中间的宽度方便 菜单图标的 居中显示*/
+        width: 100%;
+    }
+
+    .header_middle .menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        margin: auto;
+    }
+
+    .header_middle ul.nav_list {
+        position: absolute;
+        padding: 0;
+        margin: 13px 0 0;
+        left: 2%;
+        width: 96%;
+        z-index: 999;
+        display: none;
+        background: #C6C5C0;
+        margin-top: 8em;
+    }
+
+    .header_middle ul.nav_list li {
+        display: inline-block;
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .header_middle ul.nav_list li a {
+        padding: 1em 0;
+    }
+
+    .header_left a {
+        padding: 1em 1em 1em;
+    }
+
+    .header_info h1 {
+        font-size: 2.2em;
+    }
+
+    .header_info {
+        margin: 5em auto 0 5em;
+        width: 89%;
+    }
+
+    .header_wrap {
+        min-height: 480px;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .header_left a {
+        padding: 1em 0.5em 0.5em;
+    }
+
+    .header_right ul {
+        padding: 2.5em 0 0;
+    }
+
+    .header_info h1 {
+        font-size: 2em;
+    }
+
+    .header_info p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header_info {
+        margin: 5em auto 0 0em;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header_left a {
+        font-size: 1.8em;
+    }
+
+    .header_left a i {
+        left: -5px;
+    }
+
+    .header_left a span {
+        font-size: 14px;
+    }
+
+    .header_info {
+        margin: 3em auto 0 0em;
+    }
+
+    .header_info h1 {
+        font-size: 1.8em;
+    }
+
+    .header_info p {
+        font-size: 13px;
+    }
+
+    .header_middle ul li a i {
+        font-size: .7em;
+        margin: 0.2em 0 0;
+    }
+
+    .header_middle ul li a {
+        font-size: 14px;
+    }
+
+    .more a {
+        font-size: 15px;
+        padding: 8px 20px;
+    }
+
+    .header_wrap {
+        min-height: 420px;
+    }
+
+}
+
+@media (max-width: 414px) {
+    .header_info h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 320px) {
+    .header_left a {
+        font-size: 1.5em;
+    }
+
+    .header_left a span {
+        font-size: 12px;
+    }
+    .header_info h1 {
+        font-size: 1.1em;
+    }
+    .header_info p {
+        font-size: 12px;
+    }
+
+    .header_wrap {
+        min-height: 380px;
+    }
+}

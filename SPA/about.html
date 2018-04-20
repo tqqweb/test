@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!-- 解决IE8的 对媒体查询的兼容性-->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/about.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+
+    <!--引入 谷歌的字体库-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic"
+          rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--引入公共头部-->	
+<div id="header"></div>
+
+<!--放置内容的盒子-->
+<div class="about_wrap module ">
+    <div class="container">
+    	<!--图片在左 1 -->
+        <div class="row  ">
+        	<!--左边图片-->
+            <div class="col-lg-8  col-md-8 col-sm-8">
+                <img src="images/about_01.png" alt="" class="center-block img-responsive">
+            </div>
+            <!--右边文字-->
+            <div class="col-lg-4  col-md-4 col-sm-4   ">
+                <div class="text_wrap">
+                    <h2>Integrity</h2>
+                    <p>Out of utter honesty and integrity</p>
+                    <p>Treat everyone fairly</p>
+                </div>
+            </div>
+        </div>
+        <!--图片在右 2 -->
+        <div class="row ">
+        	<!--文字-->                    <!--.hidden-xs 小设备(小于 768px)隐藏,其余设备显示-->
+            <div class="col-lg-4  col-md-4 col-sm-4 hidden-xs">
+                <div class="text_wrap">
+                    <h2>Partner</h2>
+                    <p>Dedicated to love and respect.Enhance human integrity and creativit and share the company's
+                        success.</p>
+                </div>
+            </div>
+            <!--右边图片-->
+            <div class="col-lg-8 col-md-8 col-sm-8">
+                <img src="images/about_02.png" alt="" class="center-block img-responsive">
+            </div>
+			<!--文字-->    								<!--.visible-xs小设备(小于 768px)可见 ,其余设备隐藏-->
+            <div class="col-lg-4  col-md-4 col-sm-4 visible-xs">
+                <div class="text_wrap">
+                    <h2>Partner</h2>
+                    <p>Dedicated to love and respect.Enhance human integrity and creativit and share the company's
+                        success.</p>
+                </div>
+            </div>
+        </div>
+        <!--图片在左 3 -->
+        <div class="row ">
+            <div class="col-lg-8  col-md-8 col-sm-8">
+                <img src="images/about_03.png" alt="" class="center-block img-responsive">
+            </div>
+            <div class="col-lg-4  col-md-4 col-sm-4">
+                <div class="text_wrap text_1">
+                    <h2>Customer</h2>
+                    <p>Customer approval is the foundation of our existence and development.The most satisfied guest is
+                        our best publicity ambassador all of our work is designed to win lasting customer loyalty</p>
+                </div>
+            </div>
+        </div>
+        <!--图片在右 4 -->
+        <div class="row ">
+            <div class="col-lg-4  col-md-4 col-sm-4 hidden-xs">
+                <div class="text_wrap text_1">
+                    <h2>Service</h2>
+                    <p>Service is a comprehensive art.The trick of the art lies in whether the real intention of
+                        customers.Customer satisfaction alone is not enough more to impress customers</p>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+                <img src="images/about_04.png" alt="" class="center-block img-responsive">
+            </div>
+
+            <div class="col-lg-4  col-md-4 col-sm-4 visible-xs">
+                <div class="text_wrap">
+                    <h2>Service</h2>
+                    <p>Service is a comprehensive art.The trick of the art lies in whether the real intention of
+                        customers.Customer satisfaction alone is not enough more to impress customers</p>
+                </div>
+            </div>
+        </div>
+        <!--图片在左 5 -->
+        <div class="row ">
+            <div class="col-lg-8  col-md-8 col-sm-8">
+                <img src="images/about_05.png" alt="" class="center-block img-responsive">
+            </div>
+            <div class="col-lg-4  col-md-4 col-sm-4">
+                <div class="text_wrap ">
+                    <h2>Profit</h2>
+                    <p>Realized profit is the cornerstone of our development.Treat everyone fairly we need to make sure
+                        each store to achieve steady growth in performance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--引入公共尾部-->	
+<div id="footer"></div>
+<script>
+    $("#header").load("header.html");
+    $("#footer").load("footer.html");
+</script>
+</body>
+</html>

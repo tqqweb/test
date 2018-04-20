@@ -1,0 +1,619 @@
+/*头部下面 第一层内容的样式*/
+.top_content {
+    padding: 5em 0;
+}
+
+.top_content .top_right h3 {
+	/*text-transform 转换不同元素中的文本  */  
+	/*capitalize	文本中的每个单词以大写字母开头。
+    uppercase	定义仅有大写字母。
+	lowercase	定义无大写字母，仅有小写字母。 */
+    text-transform: capitalize;
+    font-size: 1.8em;
+    color: #6ea145;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+
+.top_content .top_right h4 {
+    text-transform: uppercase;
+    color: #9D4922;
+    margin: 1em 0;
+    font-size: 15px;
+}
+
+.top_content .top_right p {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.8em;
+    margin: 0 0 4em;
+}
+
+.top_content .top_right .m1 a:hover {
+    background: #c6c5c0;
+    color: #fff;
+}
+
+/*头部下面第二层内容的样式*/
+.middle_content .middle_item {
+    padding: 0 0 3em;
+    box-shadow: 1px 0 1px #C0C0C0;
+    -webkit-box-shadow: 1px 0 1px #C0C0C0;
+    -moz-box-shadow: 1px 0 1px #C0C0C0;
+    -o-box-shadow: 1px 0 1px #C0C0C0;
+    -ms-box-shadow: 1px 0 1px #C0C0C0;
+}
+/*设置图片宽和父级一样*/
+.middle_content .middle_item img{
+	width: 100%;
+}
+
+
+.middle_content .middle_item h3 {
+    text-transform: capitalize;
+    font-size: 1.5em;
+    color: #9D4922;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 1em 0 0;
+}
+
+.middle_content .middle_item p {
+    color: #C7C7C7;
+    font-size: 14px;
+    margin: 1em 0 2em;
+    line-height: 1.8em;
+}
+
+
+/*在小于等于1200px的屏上调整 头部下面 第一层内容  文字的位置*/
+/*-----start-responsive-design------*/
+@media (max-width: 1200px) {  
+    .top_content .top_right p {
+        margin: 0 0 2em;
+    }
+}
+/*在小于等于991px的屏上调整模块一.top_content的padding值和它右面的margin值*/
+@media (max-width: 991px) {  
+    .top_content {
+        padding: 3em 0;
+    }
+    .top_content .top_right {
+        margin: 2em 0 0;
+    }
+}
+/*在小于等于768px的屏上调整模块一.top_content和.middle_content中文字的大小*/
+@media (max-width: 768px) {  
+    .top_content .top_right h3 {
+        font-size: 1.6em;
+    }
+    .middle_content .middle_item h3 {
+        font-size: 1.2em;
+    }
+}
+/*在小于等于480px的屏上是调整模块一.top_content的padding值和它右面的margin值*/
+@media (max-width: 480px) {   
+    .top_content {
+        padding: 2em 0;
+    }
+
+    .top_content .top_right {
+        margin: 1em 0 0;
+    }
+}
+/*在小于等于320px的屏上是调整各个部分的细节的位置关系和字体的大小*/
+@media (max-width: 320px) {
+    .top_content .top_left {
+        padding: 0 !important;
+    }
+
+    .top_content .top_right h3 {
+        font-size: 1.4em;
+    }
+
+    .top_content .top_rightt h4 {
+        margin: 0.5em 0;
+        font-size: 13px;
+    }
+
+    .top_content .top_right p {
+        margin: 0 0 1em;
+        font-size: 13px;
+    }
+
+    .middle_content .middle_item p {
+        font-size: 13px;
+        margin: 0.5em 0 1em;
+    }
+
+}
+
+/*头部下面第三层内容 轮播内容*/
+/*banner*/
+/*设置轮播包裹.banner_wrap距上方和下方的部分的距离这里我们用padding撑开*/
+.banner_wrap {
+    padding: 5em 0 10em;
+    position: relative;
+}
+/*设置轮播盒子.banner的属性并设置它的定位方式为relative方便轮播列表.banner_list的移动。设置overflow:hidden;使超出部分隐藏掉*/
+.banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/*设置.banner_list的宽度为1000%（以免宽度不够）*/
+.banner .banner_list {
+    width: 1000%;
+    zoom: 1;
+/*定位方式为absolute在这里我们先注释掉，为了防止我们静态页面显示不出来*/    
+/*（在父级元素为相对定位并设有超出隐藏且不设置高度时，子元素定位方式设置为absolute后会脱离文档流，撑不开父级的高度，造成子元素不显示）。*/   
+    position: absolute;
+}
+
+/*浮动轮播里的每一块内容,让其排成一行*/
+.banner .banner_list li.banner_item {
+    float: left;
+    width: 1140px;
+}
+
+/*设置轮播中上部分内容的样式（里面的大宽度利用百分比设置，方便一会设置不同屏幕的适配）*/
+/*上面左边图片左浮动*/
+.banner_top .top_left {
+    float: left;
+    width: 55%;
+}
+
+.banner_top .top_left img {
+    width: 100%;
+    display: block;
+}
+/*上面右边内容右浮动*/
+.banner_top .top_right {
+    float: right;
+    width: 45%;
+    background: url(../images/7.jpg) no-repeat 0px 0px;
+    display: block;
+    min-height: 417px;
+    padding: 2em;
+}
+
+.banner_top .top_right h3 {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.8em;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.banner_top .top_right h4 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 1em 0;
+    line-height: 1.3em;
+    color: #6ea145;
+}
+
+.banner_top .top_right p {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    line-height: 1.8em;
+}
+
+/*设置轮播中下部分内容的样式（同样里面的大宽度利用百分比设置）*/
+.banner_bottom {
+    margin: 3em 0 0;
+}
+/*轮播内下部分左边内容*/
+.banner_bottom .btm_left {
+    float: left;
+    width: 30%;
+    background: url(../images/8.jpg) no-repeat 0px 0px;
+    display: block;
+    min-height: 301px;
+    padding: 2em;
+}
+
+.banner_bottom .btm_left h3 {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.8em;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.banner_bottom .btm_left p {
+    font-size: 14px;
+    color: #fff;
+    margin: 1.5em 0 0em;
+    line-height: 1.8em;
+}
+/*轮播内下部分中间内容*/
+.banner_bottom .btm_left1 {
+    float: left;
+    width: 40%;
+}
+
+.banner_bottom .btm_left1 img {
+    display: block;
+    width: 100%;
+}
+/*轮播内下部分右边内容*/
+.banner_bottom .btm_right {
+    float: right;
+    width: 28%;
+    background: url(../images/10.jpg) no-repeat 0px 0px;
+    display: block;
+    min-height: 301px;
+    padding: 8em 0 0;
+    text-align: center;
+}
+
+/*  轮播的小点 */
+/*设置轮播焦点的样式*/
+.banner_nav {
+	/*设置.banner_nav的定位方式为absolute并调整它的位置*/
+    position: absolute;
+    left: 46.3%;
+    bottom: 7%;
+    /*border: 1px solid;*/
+}
+
+.banner_nav li {
+    /*设置li的display为inline-block让它变为行块元素并设置它们的距离和小点的样式*/
+    display: inline-block;
+    margin: 0 6px;
+    zoom: 1;
+    width: 20px;
+    height: 20px;
+    background: #6EA145;
+    border-radius: 15px;
+    cursor: pointer;
+    /*文字缩进*/
+    /*text-indent:-9999px;将图片上的字体隐藏*/
+    text-indent: -9999px;
+}
+/*设置当前显示的.active的样式*/
+.banner_nav li.active {
+    background: #C6C5C0;
+    cursor: default;
+}
+
+
+/*在小于等于1200px的屏上是轮播的图片会出现错位，用min-height来调整图片的高度值并调整h3标签内的字体大小*/
+@media (max-width: 1200px) {
+	
+    .banner_top .top_left img {
+        min-height: 426px;
+    }
+    .banner_bottom .btm_left1 img {
+        min-height: 301px;
+    }
+    .banner_top .top_right h3, .banner_bottom .btm_left h3 {
+        font-size: 1.5em;
+    }
+}
+/*在小于等于991px的屏上调整轮播内的细节样式问题*/
+@media (max-width: 991px) {
+    .banner_top .top_left img {
+        min-height: 417px;
+    }
+
+    .banner_top .top_right {
+        padding: 1.5em;
+    }
+
+    .banner_top .top_right h4 {
+        margin: 0.5em 0;
+    }
+
+    .banner_top .top_right p, .banner_bottom .btm_left p {
+        line-height: 1.5em;
+    }
+
+    .banner_bottom .btm_left {
+        padding: 1em;
+    }
+
+}
+
+/*在小于等于768px的屏上时轮播上下部分中的内容变成单行显示，
+所以要清除掉浮动，然后设置宽的为100%，背景是图片的还要设置background:cover;
+让背景图片保持图片本身的宽高比例，将图片缩放到整好完全覆盖定义背景的区域。
+调整其他细节样式。*/
+@media (max-width: 768px) {
+    .banner_top .top_left {
+        float: none;
+        width: 100%;
+    }
+	/*轮播上部分左边内容*/
+    .banner_top .top_left img {
+        min-height: initial;
+    }
+	/*轮播上部分右边内容*/
+    .banner_top .top_right {
+        float: none;
+        width: 100%;
+        background: url(../images/7.jpg) no-repeat 0px 0px;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        min-height: 300px;
+    }
+    /*轮播下部分左边内容*/
+    .banner_bottom .btm_left {
+        float: none;
+        width: 100%;
+        background: url(../images/8.jpg) no-repeat 0px 0px;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        min-height: 165px;
+    }
+	/*轮播下部分中间内容*/
+    .banner_bottom .btm_left1 {
+        float: none;
+        width: 100%;
+    }
+	/*轮播下部分右边内容*/
+    .banner_bottom .btm_right {
+        float: none;
+        width: 100%;
+        background: url(../images/10.jpg) no-repeat 0px 0px;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        min-height: 150px;
+        padding: 4em 0 0;
+    }
+	/*轮播最外层包裹*/
+    .banner_wrap {
+        padding: 3em 0 6em;
+    }
+	/*分页器小圆点*/
+    .banner_nav {
+        left: 41.3%;
+        bottom: 2%;
+    }
+
+}
+/*在小于等于480px的屏上是调整轮播整体的变形和其他小细节*/
+@media (max-width: 480px) {
+    .banner_bottom .more a {
+        font-size: 15px;
+        padding: 8px 20px;
+    }
+    .banner_top .top_right h3, .banner_bottom .btm_left h3 {
+        font-size: 1.2em;
+    }
+
+    .banner_top .top_right h4 {
+        font-size: 16px;
+    }
+
+    .banner_top .top_right {
+        padding: 1em 1.5em;
+    }
+
+    .banner_bottom .btm_left1 {
+        margin: 1em 0 0;
+    }
+
+    .banner_wrap {
+        padding: 1em 0 4em;
+    }
+    .banner_nav li a {
+        width: 15px;
+        height: 15px;
+    }
+
+    .banner_nav {
+        left: 38.3%;
+        bottom: 1%;
+    }
+}
+/*在小于等于320px的屏上是调整各个部分的细节的位置关系和字体的大小*/
+@media (max-width: 320px) {
+    .banner_wrap {
+        padding: 0em 0 3em;
+    }
+
+    .banner_top .top_right h4 {
+        font-size: 13px;
+        margin: .5em 0;
+    }
+
+    .banner_top .top_right {
+        padding: 1em;
+    }
+
+    .banner_top .top_right p, .banner_bottom .btm_left p {
+        font-size: 13px;
+    }
+
+    .banner_bottom .btm_left p {
+        margin: 0.5em 0 0em;
+    }
+
+    .banner_bottom .btm_left {
+        padding: 1em;
+    }
+
+    .banner_top .top_right h3, .banner_bottom .btm_left h3 {
+        font-size: 1em;
+    }
+
+    .banner_bottom .btm_right {
+        min-height: 90px;
+        padding: 2em 0 0;
+    }
+
+    .banner_nav {
+        left: 31.3%;
+        bottom: 0.5%;
+    }
+
+    .banner_nav li a {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+
+/*-- keep_in_touch --*/
+
+.keep_in_touch{
+    padding: 5em 0;
+    background-color: #E6E6E6;
+}
+.touch_text h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5em;
+    color: #6ea145;
+    margin: 0;
+}
+
+.touch_input{
+    margin: 0.5em 0 0;
+}
+
+.touch_textp {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+}
+
+.touch_input input[type="text"] {
+    width: 80%;
+    background: #fff;
+    border: none;
+    font-size: 14px;
+    color: #A2A2A2;
+    outline: none;
+    padding: 14px 10px;
+    float: left;
+}
+
+.touch_input input[type="submit"] {
+    width: 20%;
+    float: left;
+    background: url(../images/1.png) no-repeat 56px 11px #6ea145;
+    outline: none;
+    border: none;
+    padding: 13px 0;
+    text-align: center;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+}
+
+.touch_input input[type="submit"]:hover {
+    background: url(../images/1.png) no-repeat 56px 11px #c6c5c0;
+}
+
+
+
+/*响应式*/
+/*在小于等于1024px的屏上调整*/
+@media (max-width: 1024px) {
+    .touch_text p {
+        font-size: 13px;
+    }
+    .touch_text h3 {
+        font-size: 2.2em;
+    }
+}
+
+/*调整.keep_in_touch距外面部分的距离通过padding来调整
+在小于等于768px的屏上时这个模块分为上下两部分，上部分的文字设置为居中对齐*/
+@media (max-width: 768px) {
+    .keep_in_touch{
+        padding: 3em 0;
+    }
+
+    .touch_text{
+        text-align: center;
+        margin: 0 0 1em;
+    }
+}
+/*在小于等于480px的屏上调整调 整各个部分的位置关系和字体大小还有按钮的背景图片的位置*/
+@media (max-width: 480px) {
+    .touch_text h3 {
+        font-size: 1.5em;
+    }
+
+    .keep_in_touch{
+        padding: 2em 0;
+    }
+
+    .touch_input input[type="submit"] {
+        background: url(../images/1.png) no-repeat 30px 11px #6ea145;
+    }
+
+    .touch_input input[type="submit"]:hover {
+        background: url(../images/1.png) no-repeat 30px 11px #c6c5c0;
+    }
+}
+/*在小于等于320px的屏上调整 调整各个部分的位置关系和字体的大小还有按钮背景图片的位置*/
+@media (max-width: 320px) {
+    .touch_text p {
+        font-size: 12px;
+    }
+
+    .touch_text h3 {
+        font-size: 1.2em;
+    }
+
+    .keep_in_touch{
+        padding: 1em 0;
+    }
+
+    .touch_input input[type="text"] {
+        font-size: 13px;
+        padding: 10px 10px;
+    }
+
+    .touch_input input[type="submit"] {
+        padding: 8px 0;
+        background: url(../images/1.png) no-repeat 14px 7px #6ea145;
+    }
+
+    .touch_input input[type="submit"]:hover {
+        background: url(../images/1.png) no-repeat 14px 7px #c6c5c0;
+    }
+
+    .get_in_touch h3 {
+        letter-spacing: 0px;
+        font-size: 1.1em;
+    }
+}
+/*轮播的图片*/
+.img_12{
+     background-image: url(../images/xn_banner/12.png)!important;
+ }
+
+.img_13{
+    background-image: url(../images/xn_banner/13.png)!important;
+}
+.img_15{
+    background-image: url(../images/xn_banner/15.png)!important;
+}
+
+.img_32{
+    background-image: url(../images/xn_banner/32.png)!important;
+}
+
+.img_33{
+    background-image: url(../images/xn_banner/33.png)!important;
+}
+.img_35{
+    background-image: url(../images/xn_banner/35.png)!important;
+}

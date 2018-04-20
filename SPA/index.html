@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Title</title>
+    <!-- 解决IE9的 对m媒体查询的兼容性-->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!--引入 谷歌的字体库-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic"
+          rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="indexHeader"></div><!--加载共头部的容器-->
+<!--头部下面 第一层内容  左边头部右边文字-->
+<div  class="top_content module ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 top_left">
+                <!--设置图片为响应式图片-->
+                <img src="images/1.jpg" alt=" " class="img-responsive">
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 top_right">
+                <h3>nisi ut aliquid ex ea commodi consequatur</h3>
+                <h4>magnam aliquam quaerat voluptatem quis</h4>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                    consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                    incidunt ut labore et dolore magnam aliquam quaerat voluptatem quis
+                    autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
+                    nihil molestiae consequatur.</p>
+                <div class="more m1">
+                    <a href="learnmore.html">Learn More</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--头部下面第二层内容  三个图文-->
+<div  class="middle_content module">
+    <div class="container">
+        <div class="row">
+        	<!--第一部分-->
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+               <div class="middle_item">	<!--img-responsive是Bootstrap框架中设置图片响应式的CSS样式应用这个样式以后，图片就会变成响应式图片。-->
+                    <img src="images/i_2.jpg" alt=" " class="img-responsive">
+                    <h3>magnam aliquam quaerat voluptatem quis dolorem</h3>
+                    <p>Neque porro quisquam est,reprehenderit qui in ea voluptate velit esse qui dolorem ipsum quia
+                        dolor
+                        sit amet,
+                        consectetur, adipisci velit.</p>
+                   	<!--按钮样式都是common.css里公共样式  .more a -->
+                   	<div class="more m1">
+                        <a href="learnmore.html">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!--第二部分-->
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                <div class="middle_item">
+                    <img src="images/i_3.jpg" alt=" " class="img-responsive">
+                    <h3>magnam aliquam quaerat voluptatem quis dolorem</h3>
+                    <p>Neque porro quisquam est,reprehenderit qui in ea voluptate velit esse qui dolorem ipsum quia
+                        dolor
+                        sit amet,
+                        consectetur, adipisci velit.</p>
+                    <div class="more m1">
+                        <a href="learnmore.html">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!--第三部分-->
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+                <div class="middle_item">
+                    <img src="images/i_1.jpg" alt=" " class="img-responsive">
+                    <h3>magnam aliquam quaerat voluptatem quis dolorem</h3>
+                    <p>Neque porro quisquam est,reprehenderit qui in ea voluptate velit esse qui dolorem ipsum quia
+                        dolor
+                        sit amet,
+                        consectetur, adipisci velit.</p>
+                    <div class="more m1">
+                        <a href="learnmore.html">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!--.clearfix 是  Bootstrap 辅助类  清除浮动的作用-->
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--头部下面第三层内容  轮播 -->
+<!--创建一个.banner_wrap的div盒子包裹住整体的轮播内容并创建.container的div盒子（在bootstrap为栅格系统的容器）-->
+<div class="banner_wrap">
+    <div class="container">
+    	<!--再创建一个.banner的div放置轮播的列表-->
+        <div class="banner"><!-- banner 的框 -->
+            <!--.banner_list里面.banner_item为轮播的实际内容-->
+            <ul class="banner_list"> <!-- banner 移动的元素-->
+                <!--（由于每个轮播的实际内容及布局都一样，所有这里我们只写一个，其余粘贴复制4个就行）-->
+                <!--第一块-->
+                <li class="banner_item" > <!-- 单个 的bannner的视图-->
+                        <!--轮播的上部分内容-->
+                        <div class="banner_top"> <!-- banner的 顶部内容-->
+                            <!--上面左边图片-->
+                            <div class="top_left">
+                                <img src="images/xn_banner/11.jpg" alt="">
+                            </div>
+                            <!--上面右边文字内容-->
+                            <div class="top_right img_12">
+                                <h3>Neque Porro Quisquam Est,Reprehenderit Qui</h3>
+								
+                                <h4>VERITATIS ET QUASI ARCHITECTO BEATAE VITAE DICTA SUNT EXPLICABO</h4>
+		
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                                    ratione
+                                    voluptatem sequi nesciunt.</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!--轮播的下部分内容-->
+                        <div class="banner_bottom"> 
+                        	<!--左边内容-->
+                            <div class="btm_left img_13">
+                                <h3>Neque Porro Quisquam Est Qu Sed</h3>
+                                <p>
+                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                    consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                                </p>
+                            </div>
+                            <!--中间内容-->
+                            <div class="btm_left1">
+                                <img src="images/xn_banner/14.png" alt="">
+                            </div>
+                            <!--右边内容-->
+                            <div class="btm_right img_15">
+                                <div class="more">
+                                    <a href="learnmore.html">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                </li>
+                <!--第二块-->
+                <li class="banner_item" > <!-- 单个 的bannner的视图-->
+                    <div style="width: 100%">
+                        <div class="banner_top"> <!-- banner的 顶部内容-->
+                            <div class="top_left">
+                                <img src="images/6.jpg" alt="">
+                            </div>
+                            <div class="top_right">
+                                <h3>Neque Porro Quisquam Est,Reprehenderit Qui</h3>
+
+                                <h4>VERITATIS ET QUASI ARCHITECTO BEATAE VITAE DICTA SUNT EXPLICABO</h4>
+
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                                    ratione
+                                    voluptatem sequi nesciunt.</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="banner_bottom"> <!--banner 的下面的内容-->
+                            <div class="btm_left">
+                                <h3>Neque Porro Quisquam Est Qu Sed</h3>
+                                <p>
+                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                    consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                                </p>
+                            </div>
+                            <div class="btm_left1">
+                                <img src="images/9.jpg" alt="">
+                            </div>
+                            <div class="btm_right">
+                                <div class="more">
+                                    <a href="learnmore.html">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </li>
+                <!--第三块-->
+                <li class="banner_item"> <!-- 单个 的bannner的视图-->
+                    <div style="width: 100%">
+                        <div class="banner_top"> <!-- banner的 顶部内容-->
+                            <div class="top_left">
+                                <img src="images/xn_banner/31.jpg" alt="">
+                            </div>
+                            <div class="top_right  img_32">
+                                <h3>Neque Porro Quisquam Est,Reprehenderit Qui</h3>
+
+                                <h4>VERITATIS ET QUASI ARCHITECTO BEATAE VITAE DICTA SUNT EXPLICABO</h4>
+
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                                    ratione
+                                    voluptatem sequi nesciunt.</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="banner_bottom"> <!--banner 的下面的内容-->
+                            <div class="btm_left img_33">
+                                <h3>Neque Porro Quisquam Est Qu Sed</h3>
+                                <p>
+                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                    consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                                </p>
+                            </div>
+                            <div class="btm_left1">
+                                <img src="images/xn_banner/34.png" alt="">
+                            </div>
+                            <div class="btm_right img_35">
+                                <div class="more">
+                                    <a href="learnmore.html">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </li>
+                <!--第四块-->
+                <li class="banner_item" > <!-- 单个 的bannner的视图-->
+                    <div class="banner_top"> <!-- banner的 顶部内容-->
+                        <div class="top_left">
+                            <img src="images/xn_banner/11.jpg" alt="">
+                        </div>
+                        <div class="top_right img_12">
+                            <h3>Neque Porro Quisquam Est,Reprehenderit Qui</h3>
+
+                            <h4>VERITATIS ET QUASI ARCHITECTO BEATAE VITAE DICTA SUNT EXPLICABO</h4>
+
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                voluptas
+                                sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                                ratione
+                                voluptatem sequi nesciunt.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="banner_bottom"> <!--banner 的下面的内容-->
+                        <div class="btm_left img_13">
+                            <h3>Neque Porro Quisquam Est Qu Sed</h3>
+                            <p>
+                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                            </p>
+                        </div>
+                        <div class="btm_left1">
+                            <img src="images/xn_banner/14.png" alt="">
+                        </div>
+                        <div class="btm_right img_15">
+                            <div class="more">
+                                <a href="learnmore.html">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+    <!--分页器小圆点-->
+    <ul class="banner_nav">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</div>
+
+<!--设置keep-in-touch的基本标签结构-->
+<div class="keep_in_touch">
+    <div class="container">
+        <div class="row">
+        	<!--左边文字-->
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 touch_text">
+                <h3>Keep In Touch</h3>
+                <p>We Will give you latest information about spa.</p>
+            </div>
+            <!--右边input框-->
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 touch_input">
+                <input type="text" value="Enter Your Mail..." itemscope="Enter Your Mail..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Mail...';}" required="">
+                <input type="submit" value=" ">
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--引入公共的尾部-->
+<div id="footer"></div>
+<script>
+    $("#indexHeader").load("header.html");
+    $("#footer").load("footer.html");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+
+    <!--引入 谷歌的字体库-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic"
+          rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="header"></div>
+<!--contact主体内容-->
+<div class="contact module">
+    <div class="container">
+        <h3>Contact Us</h3>
+        <!--地图内容-->
+        <div id="allmap" class="baidu_map">
+        	<!--由于地图是用js引入的，所以不用设置地图的具体内容。-->
+        </div>
+        <!--地图下面的内容-->
+        <div class=" row  contact_form">
+        	 <!--地图下面左边的地址内容-->
+        	 <!--设置12栅格，由于在小于992px以下的屏上是占的列数是12列一行全占，不设置的时候也会一行全占，所以设不设都一样。-->
+            <div class="col-lg-4 col-md-4  contact_form_left">
+                <h4>Address :</h4>
+                <p>Eiusmod Tempor inc</p>
+                <p>9560 St Dolore Place,</p>
+                <p>Telephone : +1 800 603 6035</p>
+                <p>FAX : +1 800 889 9898</p>
+            </div>
+            <!--地图下面右边的联系申请表-->
+            <div class="col-lg-8 col-md-8 contact_form_right">
+                <h4>Contact Form</h4>
+                <form>
+                	<!--onfocus 事件在对象获得焦点时发生。-->
+                	<!--onfocus="this.value = '';"  当焦点移动到该text框时，text框的内容清空-->
+                    <!--onblur 属性在元素失去焦点时触发。-->
+                    <!--onblur="if (this.value == '') {this.value = 'Name';}" 当焦点失去时value值会变成指定值-->
+                    <input type="text" value="Name" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'Name';}" required="">
+                    <input type="email" value="Email" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'Email';}" required="">
+                    <input type="text" value="Telephone" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
+                    <textarea type="text" onfocus="this.value = '';"
+                              onblur="if (this.value == '') {this.value = 'Message...';}"
+                              required="">Message...</textarea>
+                    <input type="submit" value="Submit" >
+                </form>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--百度地图js-->
+<!--主要代码均为百度地图api复制代码，相应的配置项，都有注释说明，大家可自行修改。-->
+ <!--引入百度地图的在线css+js库，编写js代码-->
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css"/>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2.0&ak=3qkFf2G2rUbWKsNYmc2dDvL7"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap"); // 创建Map实例
+    var poi = new BMap.Point(116.356158, 40.09425);//创建点坐标
+    map.centerAndZoom(poi, 16); // 初始化地图,设置中心点坐标和地图级别
+    map.addControl(new BMap.MapTypeControl()); //添加地图类型控件
+    map.setCurrentCity("北京"); // 设置地图显示的城市 此项是必须设置的
+    //map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+
+    //地图控件添加函数：
+    (function () {
+        //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({
+            anchor: BMAP_ANCHOR_TOP_LEFT,
+            type: BMAP_NAVIGATION_CONTROL_LARGE
+        });
+        map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+        var ctrl_ove = new BMap.OverviewMapControl({
+            anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+            isOpen: 1
+        });
+        map.addControl(ctrl_ove);
+        // 向地图中添加比例尺控件
+        var ctrl_sca = new BMap.ScaleControl({
+            anchor: BMAP_ANCHOR_BOTTOM_LEFT
+        });
+        map.addControl(ctrl_sca);
+    })();
+    var content = '<div style="margin:0;line-height:20px;padding:2px;width: 310px;">' +
+            '<img src="images/xiaoniao_icon.png" alt="" style="float:right;zoom:1;margin-top:9px;overflow:hidden;width:90px;height:90px;margin-left:3px;"/>' +
+            '地址：北京市昌平区站前东街2号<br/>电话：(010)028-8888888<br/>简介：田园风光综合商业楼3层，为小鸟掌学综合研发及办公地址。' +
+            '</div>';
+    var infoWindow = new BMap.InfoWindow(content); //创建信息窗口对象
+    var marker = new BMap.Marker(poi);//创建 marker
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    marker.addEventListener("click", function (e) {//给marker 添加 点击事件
+        this.openInfoWindow(infoWindow);
+    })
+    map.addOverlay(marker);//向map中添加 marker
+
+    $(window).resize(function () {//窗口改变时  重新 初始化地图
+	   map.centerAndZoom(poi, map.getZoom());// 初始化地图,设置中心点坐标和地图级别
+    })
+</script>
+
+<div id="footer"></div>
+<script>
+    $("#header").load("header.html");
+    $("#footer").load("footer.html");
+</script>
+</body>
+</html>

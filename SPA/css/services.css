@@ -1,0 +1,366 @@
+@charset "utf-8";
+
+/*第一部service分样式开始*/
+/*设置.services_wrap与其它部分的距离用padding撑开，设置内容标题的样式*/
+.services_wrap {
+    padding: 5em 0;
+}
+/*此处和第三部分的标题相同一起设置了*/
+.services_wrap h3, .best_services h3 {
+    color: #6ea145;
+    font-size: 2em;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+/*第一部分的每一个模块*/
+.service_item {
+    text-align: center;
+    margin: 2em 0 0;
+    /*border: 1px solid;*/
+}
+
+.service_item img {
+    display: block;
+    margin: 0 auto;
+}
+
+.service_item h4 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 1em 0 0;
+    color: #6ea145;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.service_item p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.8em;
+    margin: 1em 0 2em;
+}
+
+.more a:hover {
+    background: #c6c5c0 !important;
+    color: #fff !important;
+}
+
+/*鼠标移入时的遮罩层*/
+.service_hide {
+    position: absolute;
+    top: 0;
+    left: 17%;
+    width: 66%;
+    height: 250px;
+    background: rgba(110, 161, 69, 0.48);
+    border-radius: 145px;
+    /*解决兼容性问题*/
+    -webkit-border-radius: 145px;
+    -moz-border-radius: 145px;
+    -o-border-radius: 145px;
+    -ms-border-radius: 145px;
+    /*写完下面样式,最后再隐藏*/
+     display: none;
+}
+
+.service_hide h5 {
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    padding-top: 4em;
+}
+
+.service_hide p {
+    font-size: 13px;
+    color: #fff;
+    width: 60%;
+    text-align: center;
+    margin: 1em auto 0;
+    line-height: 1.7em;
+}
+/*鼠标移入模块遮罩层显示*/
+.service_item:hover .service_hide{
+    display: block;
+}
+
+/*在最下面媒体查询 media 上调整   不同宽度的屏上 各个部分的样式*/
+/*第一部分样式结束*/
+
+/*第二部分轮播banner样式开始*/
+.services_banner {
+	/*引入轮播背景图片*/
+    background: url(../images/5.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    min-height: 500px;
+}
+/*三块轮播文字的包裹*/
+.banner_wrap {
+    padding: 6em 0;
+    position: relative;
+}
+/*设置每块文字居中*/
+.banner_wrap .banner_item {
+    text-align: center;
+}
+.service_info h3 {
+    color: #fff;
+    font-size: 4em;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+}
+
+.service_info p {
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.8em;
+    width: 70%;
+    margin: 1em auto 0;
+}
+
+/*轮播下面分页器的样式*/
+.banner_nav {
+    z-index: 2;
+    position: absolute;
+    width: 93px;
+    height: 22px;
+    margin: auto;
+    top: 96%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.banner_nav li {
+    display: inline-block;
+    margin: 0 8px 0 0;
+    /*text-indent首行文本的缩进*/  
+    /*text-indent: -9999px;的作用是隐藏文本*/
+   	/*既然-9999隐藏他 干嘛还要写呢？直接把a标签里的文字去掉不行吗？？
+    这个值是把内容移到屏幕显示范围之外，多用于做图片定位，加字是为了更直观，
+    而且搜索引擎可以索引到，很多网站都这么写*/
+    text-indent: -9999px;
+    width: 22px;
+    height: 5px;
+    background: #fff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor: pointer;
+}
+.banner_nav li.active {
+    background: #6ea145;
+}
+/*在最下面媒体查询 media 上调整   不同宽度的屏上 各个部分的样式*/
+/*第二部分轮播样式结束*/
+
+/*第三部分The Best Services样式开始*/
+.best_services {
+/*设置.best_services距上下部分的距离用padding撑开*/
+    padding: 5em 0;
+}
+/*设置图标的大小和颜色*/
+.best_item .item_left span {
+    font-size: 3em;
+    color: #c6c5c0;
+}
+/*设置该部分文字的样式*/
+.best_item .item_right h4 {
+    color: #c6c5c0;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: capitalize;
+    font-size: 1.5em;
+    margin: 0 0 1em;
+}
+
+.best_item .item_right p {
+    color: #999;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.8em;
+}
+
+/*适配开始*/
+/*在不同宽度的屏幕上调节细节样式*/
+/*在小于等于1024px的屏上调整遮罩层的大小位置还有所有文字的字体大小*/
+    @media (max-width:1024px){
+    	/*调整service内容*/
+        .service_hide p {
+            width: 100%;
+            /*border: 1px solid red;*/
+        }
+        .service_hide {
+            width: 78%;
+            left: 11%;
+        }
+        /*调整轮播内容*/
+        .service_info h3 {
+            font-size: 3em;
+        }
+
+        .services_banner {
+            min-height: 405px;
+        }
+        .service_info p {
+            width: 75%;
+        }
+        .banner_nav{
+            top:81%;
+        }
+        
+        /*调整第三部分The Best Services*/
+        .item_right h4 {
+            font-size: 1.3em;
+        }
+        
+    }
+/*在小于等于768px的屏上调整遮罩层的大小位置还有所有文字的字体大小*/
+    @media (max-width:768px){
+    	/*调整service内容*/
+        .service_item {
+            float: left;
+            width: 33.33%;
+        }
+        .service_hide {
+            width: 87%;
+            left: 7%;
+            height: 215px;
+        }
+        .service_item h4 {
+            font-size: 1.2em;
+        }
+        /*调整轮播内容*/
+        .service_info h3 {
+            width: 100%;
+        }
+        .banner_nav{
+            top:78%;
+        }
+        
+        /*调整第三部分The Best Services*/
+        .item_right {
+            margin: 0 0 2em;
+        }
+    }
+/*在小于等于640px的屏上调整遮罩层的大小位置还有所有文字的字体大小*/
+    @media (max-width:640px){
+    	/*调整service内容*/
+        .service_hide h5 {
+            padding-top: 2em;
+        }
+        .service_hide p {
+            width: 98%;
+        }
+        .service_hide {
+            width: 85%;
+            left: 8%;
+            height: 168px;
+        }
+         /*调整轮播内容*/
+         .services_wrap h3, .best_services h3 {
+            font-size: 1.8em;
+        }
+        .service_info h3 {
+            font-size: 2.5em;
+        }
+        .service_info p {
+            font-size: 14px;
+        }
+        .services_banner {
+            min-height: 335px;
+        }
+        
+        .banner_wrap {
+            padding: 3em 0;
+        }
+        .banner_nav{
+            top:96%;
+        }
+        
+        .servc-grids:nth-child(2) {
+            margin: 2em 0 0;
+        }
+    }
+/*在小于等于480px的屏上调整遮罩层的大小位置还有所有文字的字体大小*/
+    @media (max-width:480px){
+    	/*调整service内容*/
+        .more a {
+            font-size: 15px;
+            padding: 8px 20px;
+        }
+        .service_item {
+            float: none;
+            width: 80%;
+            margin: 0 auto 2em;
+        }
+        .service_hide {
+            width: 72%;
+            left: 14%;
+            height: 250px;
+        }
+        /*调整轮播内容*/
+        .service_info h3 {
+            font-size: 2em;
+        }
+        .service_hide h5 {
+            padding-top: 4em;
+        }
+    }
+/*在小于等于320px的屏上调整遮罩层的大小位置还有所有文字的字体大小*/
+    @media (max-width: 320px){
+    	/*调整service内容*/
+        .service_item {
+            width: 100%;
+            margin-top: 5px;
+        }
+        .service_hide {
+            width: 84%;
+            left: 8%;
+            height: 250px;
+        }
+        .service_item p {
+            font-size: 13px;
+            margin: .5em 0 1em;
+        }
+        .service_item:nth-child(3) {
+            margin: 0;
+        }
+        /*调整轮播内容*/
+        .service_info h3 {
+            font-size: 1.5em;
+        }
+        .service_info p {
+            font-size: 13px;
+            width: 100%;
+        }
+        .services_banner {
+            min-height: 290px;
+        }
+        .services_wrap h3, .best_services h3 {
+            font-size: 1.6em;
+        }
+        
+        /*调整第三部分The Best Services*/
+       .best_item{
+            padding: 0 !important;
+        }
+        .item_right p{
+            font-size: 13px;
+        }
+        .item_right h4 {
+            font-size: 1em;
+        }
+        .glyphicon-apple, .glyphicon-grain, .glyphicon-heart, .glyphicon-globe {
+            font-size: 2em;
+        }
+        
+    }
+    
+/*由于这个页面的头部样式与index页面不同，所以头部样式单独设置在common.js中*/

@@ -1,0 +1,93 @@
+/*公共*/
+html, body {
+    background: #fff;
+    font-size: 100%;
+    /*公共的字体为'Open Sans', sans-serif；*/
+    font-family: 'Open Sans', sans-serif !important;
+}
+/*清除img标签的边框（低版本ie会默认给img设置1px边框）。*/
+img{
+	border: none 0;
+}
+/*设置a标签，在鼠标移入时取消其下划线；*/
+body a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+/*清除ul、li的默认列表样式；*/
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*按钮的公共样式*/
+.more a {
+    font-size: 16px;
+    color: #FFF;
+    padding: 10px 30px;
+    text-decoration: none;
+    background-color: #6ea145;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+}
+
+.more a:hover {
+    color: #6ea145;
+    background: #fff;
+    text-decoration: none;
+}
+
+
+/*除index之外的 头部样式*/
+/*设置模块间的距离*/
+.module {
+    padding: 5em 0;
+}
+/*由于service页面的头部样式与index页面不同，所以头部样式单独设置在common.js中*/
+/*隐藏掉头部内下方的内容和设置它的最小高度*/
+#header .header_wrap {
+    min-height: 300px;
+}
+/*把#header 里面的  .header_info 文字部分隐藏掉，否则他会被文字撑开*/
+#header .header_info {
+    display: none;
+}
+
+
+@media (max-width: 992px) {
+    
+    /*设置模块间的间距随着屏幕宽的的变小而变小*/
+    .module  {
+        padding: 4em 0;
+    }
+    /*调整屏幕头部的最小高度*/
+    #header .header_wrap {
+        min-height: 181px;
+    }
+}
+@media (max-width: 768px) {
+	/*设置模块间的间距随着屏幕宽的的变小而变小*/
+    .module  {
+        padding: 3em 0;
+    }
+}
+@media (max-width: 480px) {
+    /*设置模块间的间距随着屏幕宽的的变小而变小*/
+    .module {
+        padding: 2em 0;
+    }
+     /*调整屏幕头部的最小高度*/
+    #header .header_wrap {
+        min-height: 136px;
+    }
+}
+
+
